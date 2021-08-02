@@ -4,6 +4,7 @@ import net.corda.core.contracts.Amount
 import net.corda.core.contracts.BelongsToContract
 import net.corda.core.contracts.ContractState
 import net.corda.core.identity.Party
+import net.corda.finance.POUNDS
 import net.corda.training.contract.IOUContract
 import java.util.*
 
@@ -15,5 +16,9 @@ import java.util.*
  */
 @BelongsToContract(IOUContract::class)
 data class IOUState(val amount: Amount<Currency>,
+                    val lender: Party,
+                    val borrower: Party,
+                    val paid: Amount<Currency> = 0.POUNDS): ContractState {
+
     override val participants: List<Party> get() = listOf()
 }

@@ -1,3 +1,5 @@
+Projeto criado a partir do repositório https://github.com/corda/corda-training-template para conclusão das tarefas do curso da Udemy
+
 ![Corda](https://www.corda.net/wp-content/uploads/2016/11/fg005_corda_b.png)
 
 # Corda Training Template

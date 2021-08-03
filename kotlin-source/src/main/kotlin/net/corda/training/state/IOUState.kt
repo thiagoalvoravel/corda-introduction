@@ -19,6 +19,7 @@ data class IOUState(val amount: Amount<Currency>,
                     val lender: Party,
                     val borrower: Party,
                     val paid: Amount<Currency> = 0.POUNDS): ContractState {
+    override val participants: List<Party> get() = listOf(lender, borrower)
 
     override val participants: List<Party> get() = listOf()
 }

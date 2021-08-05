@@ -41,7 +41,7 @@ class IOUContract : Contract {
             val statePartiesKeys = setOf(state.lender.owningKey, state.borrower.owningKey)
             val transactionKeys = command.signers.toSet()
 
-            "Both lender and borrower together only may sign IOU issue transaction." using (statePartiesKeys != transactionKeys)
+            "Both lender and borrower together only may sign IOU issue transaction." using (statePartiesKeys == transactionKeys)
         }
     }
 }
